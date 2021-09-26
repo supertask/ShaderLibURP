@@ -25,7 +25,7 @@
 ** Post: http://mouaif.wordpress.com/?p=94
 */
 
-float4 Desaturate(float3 color, float Desaturation)
+float4 PhotoShopDesaturate(float3 color, float Desaturation)
 {
     float3 grayXfer = float3(0.3, 0.59, 0.11);
     float d = dot(grayXfer, color);
