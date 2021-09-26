@@ -1,0 +1,13 @@
+{
+  "author": "Tasuku Takahashi",
+  "description": "Shader Library for Universal Render Pipeline ",
+  "displayName": "Shader Library URP",
+  "keywords": [ "unity" ],
+  "license": "MIT",
+  "name": "jp.supertask.shaderliburp",
+  "repository": "github:supertask/ShaderLibURP",
+  "unity": "2021.2",
+  "unityRelease": "0b11",
+  "version": "1.0.0"
+}
+

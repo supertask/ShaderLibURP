@@ -1,2 +1,1 @@
-# ShaderLibURP
-Shader Lib for URP
+# ShadersLib
