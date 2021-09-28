@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5214556546929283629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
+  m_Name: NewDrawFullscreenFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    renderPassEvent: 300
+    blitMaterial: {fileID: 2100000, guid: 88391f48cfd6d48bbbbe3a59ca3afbd3, type: 2}
+    blitMaterialPassIndex: -1
+    sourceType: 0
+    destinationType: 0
+    sourceTextureId: _SourceTexture
+    destinationTextureId: _DestinationTexture
+--- !u!114 &-3913709268525261522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e620abfbc28cb48d2a358bbbe0f03db2, type: 3}
+  m_Name: NewAbstractKuwaharaRenderPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  renderPassEvent: 300
+  settings:
+    aquaMaterial: {fileID: 2100000, guid: 88391f48cfd6d48bbbbe3a59ca3afbd3, type: 2}
+    colorfulFractalMaterial: {fileID: 2100000, guid: 7dac532d8894f447ab13d9e32428484c, type: 2}
+    colorfulFractalTex: {fileID: 0}
+    colorfulFractalLod: 7
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,8 +53,9 @@ MonoBehaviour:
   m_Name: AbstractKuwaharaPainting_Renderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 8636298372752388099}
-  m_RendererFeatureMap: 03b030ea9c4bda77
+  - {fileID: -5214556546929283629}
+  - {fileID: -3913709268525261522}
+  m_RendererFeatureMap: d3ad17cf722ca2b72edd65ef27b6afc9
   postProcessData: {fileID: 0}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -40,24 +81,3 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_AccurateGbufferNormals: 0
---- !u!114 &8636298372752388099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
-  m_Name: AbstractKuwaharaPainting
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    renderPassEvent: 300
-    blitMaterial: {fileID: 2100000, guid: 88391f48cfd6d48bbbbe3a59ca3afbd3, type: 2}
-    blitMaterialPassIndex: -1
-    sourceType: 0
-    destinationType: 0
-    sourceTextureId: _SourceTexture
-    destinationTextureId: _DestinationTexture

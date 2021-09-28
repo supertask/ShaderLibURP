@@ -122,10 +122,11 @@ Shader "URP/Advanced/ImageEffect/AbstractKuwaharaPainting"
                 //return ;
                 //return PeriodicNoise(uv*20, float3(10, 10,0));
                 
-                //bool objExists = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv) > 0;
-                bool objExists = SampleSceneDepth(i.uv) > 0;
+                //bool objExists = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, i.uv) > 0;
+                //bool objExists = SampleSceneDepth(i.uv) > 0; //Game viewでうまく表示されない
+                //bool objExists = true;
                 float4 colorFractal = tex2Dlod(_ColorfulFractalTex, float4(uv, 0, 0));
-                color.rgb = objExists ? BlendSoftLight(color.rgb, colorFractal) : color.rgb;
+                color.rgb = BlendSoftLight(color.rgb, colorFractal);
                 color.rgb = BlendHardLight(color.rgb, lines);
                 return color;
             }

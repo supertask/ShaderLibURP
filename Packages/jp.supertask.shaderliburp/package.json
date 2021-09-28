@@ -1,5 +1,7 @@
 {
-  "author": "Tasuku Takahashi",
+  "author": {
+    "name": "Tasuku Takahashi"
+  },
   "description": "Shader Library for Universal Render Pipeline ",
   "displayName": "Shader Library URP",
   "keywords": [ "unity" ],
